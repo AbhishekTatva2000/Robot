@@ -1,24 +1,25 @@
-# README
+# Toy Robot App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Version
 
-* Ruby version
+- ruby 2.6.5
+- rails 6.0.4.7
+- bundler 2.2.31
 
-* System dependencies
 
-* Configuration
+## Project Setup
 
-* Database creation
+- git clone https://gitlab.builder.ai/hive-assessment/assignments/eed3b5d8f297af585efa.git
+- bundle install
 
-* Database initialization
 
-* How to run the test suite
+## Controller
 
-* Services (job queues, cache servers, search engines, etc.)
+- robot
 
-* Deployment instructions
+## API Document
 
-* ...
+- Postman Document: https://documenter.getpostman.com/view/15314476/Uyr7JzEK
+
+- Postman Collection: https://www.getpostman.com/collections/6ab193611c7dbbc680e9
