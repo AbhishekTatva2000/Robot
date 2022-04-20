@@ -1,0 +1,60 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+before_script:
+  - export JAVA_FILES=$(find . -name "*.java" | wc -l)
+
+stages:
+  - compile
+  - analysis
+  - failure_notify
+
+variables:
+  ID: 804
+  PROJECT_KEY: $CI_PROJECT_NAME:$CI_PROJECT_ID
+
+compile_code:
+  image: openjdk:7
+  stage: compile
+  script:
+    - mkdir binaries_classes
+    - echo "Total $JAVA_FILES java file(s) found!"
+    - >
+      if [ $JAVA_FILES -le 1 ] ; then
+        echo "exiting compile stage"
+        exit 0
+      fi
+    - javac $(find . -name "*.java") -d binaries_classes
+    - echo "Java code compiled successfully!"
+  artifacts:
+    when: on_success
+    paths:
+        - ./binaries_classes/
+
+notify_failed_pipeline:
+  stage: failure_notify
+  before_script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
+  script:
+  - curl --request PUT -d "id=$ID&sonar_project_key=$PROJECT_KEY" https://code-judge.engineer.ai/api/v1/projects/pipeline_failed
+  when: on_failure
+
+sonar:
+  image: ${CI_REGISTRY}/shared-services/docker-images:sonar
+  stage: analysis
+  dependencies:
+    - compile_code
+  script:
+    - BINARIES=''
+    - >
+      if [ $JAVA_FILES -gt 1 ] ; then
+        BINARIES="-Dsonar.java.binaries=binaries_classes/"
+      fi
+    - echo $BINARIES
+    - sonar-scanner -Dsonar.host.url=https://code-analyzer.engineer.ai -Dsonar.projectName=$CI_PROJECT_PATH -Dsonar.projectKey=$PROJECT_KEY -Dsonar.projectVersion=1.0 -Dsonar.sources=. $BINARIES -Dsonar.gitlab.project_id=$CI_PROJECT_ID -Dsonar.login=eb6fe27cc81921062887ef6dce3e747e26505312
+    - task_url=$(cat .scannerwork/report-task.txt | grep ceTaskUrl= | awk '{gsub("ceTaskUrl=", ""); print}')
+    - echo $task_url
+    - echo $PROJECT_KEY
+    - curl --request PUT -d "id=$ID&sonar_project_key=$PROJECT_KEY&sonar_task_url=$task_url" https://code-judge.engineer.ai/api/v1/projects/update_task_url
