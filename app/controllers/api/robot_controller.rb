@@ -9,6 +9,10 @@ class Api::RobotController < ApplicationController
 
 		if x < 0 || y < 0 || x > 4 || y > 4
 			return render json: {messsage: "Invalid starting position."}
+		elsif place[0] != "PLACE"
+			return render json: {messsage: "PLACE command is not present or at invalid location!"}
+		elsif !["NORTH", "EAST", "WEST", "SHOUTH"].include? direction
+			return render json: {message: "direction is wrong!"}
 		end
 		move_shifts.each do |cmd|
 			case direction
@@ -62,6 +66,5 @@ class Api::RobotController < ApplicationController
 		end
 
 		render json: {location: [x,y,direction]}
-		
 	end
 end
