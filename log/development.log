@@ -661,3 +661,394 @@ Can't verify CSRF token authenticity.
 Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 278)
 
 
+Started GET "/routes" for 127.0.0.1 at 2022-05-10 13:50:06 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+actionpack (6.0.4.7) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.4.7) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.4.7) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.4.7) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.4.7) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.4.7) lib/action_dispatch/middleware/host_authorization.rb:103:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.0.4.7) lib/rails/engine.rb:527:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/robot/:0/orders" for ::1 at 2022-05-10 14:24:58 +0530
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>":0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 631)
+
+
+Started POST "/api/robot/:0/orders" for ::1 at 2022-05-10 14:25:26 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/pcs208/Robot/app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+		render json: {position}
+		                      ^
+):
+  
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:30:49 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/home/pcs208/Robot/app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+		render json: {position}
+		                      ^
+):
+  
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+app/controllers/api/robot_controller.rb:10: syntax error, unexpected '}', expecting =>
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:31:15 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:31:17 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:33:08 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:33:33 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 357)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:33:48 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:33:51 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:34:05 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 357)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:34:24 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:34:35 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:34:46 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:34:55 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 357)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:35:52 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 357)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:35:52 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:36:14 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,4,NORTH", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,4,NORTH", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:41:46 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 1,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 1,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:41:53 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 3,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 3,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:42:01 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:42:53 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 369)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:43:23 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 14:43:40 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,2,EAST", "MOVE", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 15:04:43 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 5,0,EAST", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 5,0,EAST", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 350)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 15:05:12 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 15:05:45 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 15:06:10 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-10 16:40:50 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:45:46 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:45:53 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:46:06 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:48:29 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:51:11 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:51:22 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 4,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 4,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 09:51:38 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:00:16 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:01:23 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:24:10 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 5,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 299)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:24:19 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "MOVE", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:27:34 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:30:01 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:30:28 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:30:50 +0530
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 635)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:31:10 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST23", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST23", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:32:43 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST23", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST23", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Started POST "/api/robot/0/orders" for ::1 at 2022-05-12 10:32:48 +0530
+Processing by Api::RobotController#orders as */*
+  Parameters: {"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"], "id"=>"0", "robot"=>{"commands"=>["PLACE 0,0,WEST", "JUMP", "LEFT", "MOVE", "LEFT", "MOVE"]}}
+Can't verify CSRF token authenticity.
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 300)
+
+

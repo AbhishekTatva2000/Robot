@@ -20,7 +20,9 @@ class Api::RobotController < ApplicationController
 					direction = "WEST"
 				when "RIGHT"
 					direction = "EAST"
-				end	
+				else
+					return render json: {messsage: "Invalid command passed!"}
+				end
 			when "SOUTH"
 				case cmd
 				when "MOVE"
@@ -29,7 +31,9 @@ class Api::RobotController < ApplicationController
 					direction = "EAST"
 				when "RIGHT"
 					direction = "WEST"
-				end										
+				else
+					return render json: {messsage: "Invalid command passed!"}
+				end
 			when "EAST"
 				case cmd
 				when "MOVE"
@@ -38,7 +42,9 @@ class Api::RobotController < ApplicationController
 					direction = "NORTH"
 				when "RIGHT"
 					direction = "SOUTH"
-				end	
+				else
+					return render json: {messsage: "Invalid command passed!"}
+				end
 			when "WEST"
 				case cmd
 				when "MOVE"
@@ -47,10 +53,15 @@ class Api::RobotController < ApplicationController
 					direction = "SOUTH"
 				when "RIGHT"
 					direction = "NORTH"
-				end			
+				else
+					return render json: {messsage: "Invalid command passed!"}
+				end
+			else
+				return render json: {messsage: "Invalid direction passed in command!"}
 			end
 		end
 
 		render json: {location: [x,y,direction]}
+		
 	end
 end
